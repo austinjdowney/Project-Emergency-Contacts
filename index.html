@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--asked for font on stylesheets.. doublecheck to see if this is what was asked-->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,7 +20,7 @@
             <span>My Contact List</span>
         </h1>
         <!-- TODO show the new-contact-form when this button is clicked -->
-        <button class="fab" title="New Contact">
+        <button class="fab" onClick="toggleAddContactForm()" title="New Contact">
             <i class="fa fa-lg fa-plus-circle"></i>
         </button>
         </div>
@@ -26,7 +28,7 @@
     </header>
 
     <main class="container">
-        <!-- TODO Finish this form you need two more input fields one is type="checkbox" -->
+        <!-- Done? Finish this form you need two more input fields one is type="checkbox" -->
         <form class="card mt-1 mb-1" id="new-contact-form" class="" onsubmit="addContact(event)">
             <div>
                 <h4 class="mt-1 mb-1">
@@ -38,11 +40,19 @@
                 <label for="name">Name:</label>
                 <input type="text" name="name">
             </div>
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="text" name="phone">
+            </div>
+            <div>
+                <span> Emergency Contact</span>
+                <input type="checkbox" name="emergencyContact">
+            </div>
             <hr>
             <div class="d-flex space-between">
                 <button type="submit">Submit</button>
                 <!-- TODO hide this form when this button is clicked -->
-                <button class="btn-cancel" type="button">cancel</button>
+                <button class="btn-cancel" type="button" onClick="toggleAddContactForm()">cancel</button>
             </div>
         </form>
 
@@ -68,8 +78,10 @@
                     <i class="action fa fa-trash text-danger"></i>
                 </div>
             </div>
-        </div <script src="main.js">
-        </script>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
