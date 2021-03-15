@@ -29,7 +29,7 @@ function addContact(event) {
  * Saves the string to localstorage at the key contacts 
  */
 function saveContacts() {
-    window.localStorage.setItem("contacts"), JSON.stringify(contacts)
+    window.localStorage.setItem("contacts", JSON.stringify(contacts))
     drawContacts()
 }
 
